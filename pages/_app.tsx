@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import useSWR, { SWRConfig } from "swr";
+import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -7,11 +8,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <SWRConfig
       value={{
         refreshInterval: 3000,
-        fetcher: (resource, init) =>
-          fetch(resource, init).then((res) => res.json()),
+        fetcher: (resource: string) =>
+          fetch(resource).then((res) => res.json()),
       }}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </SWRConfig>
   );
 }
