@@ -3,7 +3,7 @@ import Header from "./Header";
 
 function Layout({ children }) {
   return (
-    <div className="h-full bg-blue bg-stars flex-row justify-center py-10 ">
+    <div className="bg-blue bg-stars flex flex-col py-10 min-h-screen relative">
       <Header />
       {children}
       <Footer />

@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import useSWR, { SWRConfig } from "swr";
+import { SWRConfig } from "swr";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
 

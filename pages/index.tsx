@@ -1,20 +1,19 @@
 import Head from "next/head";
+import Directory from "../components/Directory";
 import Search from "../components/Search";
 import { useCharacters } from "../hooks/useCharacters";
-import { sortByLastname } from "../utils";
+import { filterByLastname, sortByLastname } from "../utils";
 function Home() {
   const { characters, isLoading, isError } = useCharacters();
 
   if (!isLoading) {
-    console.log("test", characters[111].name.split(" ")[1]);
-    console.log("sorted", sortByLastname(characters));
-  }
-  return (
-    <div className="px-32">
-      <div>
-        <Search />
+    return (
+      <div className="sm:px-4 md:px- 8 lg:px-32 pb-20">
+        <Search characters={sortByLastname(characters)} />
+        <Directory characters={sortByLastname(characters)} />
       </div>
-    </div>
-  );
+    );
+  }
+  return <div className="sm:px-4 md:px- 8 lg:px-32">loading</div>;
 }
 export default Home;

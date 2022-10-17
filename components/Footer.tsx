@@ -1,9 +1,6 @@
 function Footer() {
   return (
-    <div
-      className="fixed bottom-10 w-full 
-     flex flex-col items-center text-white"
-    >
+    <div className="absolute bottom-10 w-full flex flex-col items-center text-white">
       <div>Mischief managed</div>
       <div>
         <p className="font-body text-xs">
