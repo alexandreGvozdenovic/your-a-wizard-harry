@@ -39,7 +39,6 @@ function Input({
                     {suggestions.length > 1 ? "s" : ""}
                   </p>
                   {suggestions.map((character, i) => {
-                    console.log("char", character);
                     return (
                       <div
                         className="flex items-center mb-4 cursor-pointer"

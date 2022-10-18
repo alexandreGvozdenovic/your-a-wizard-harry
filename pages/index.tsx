@@ -8,12 +8,12 @@ function Home() {
 
   if (!isLoading) {
     return (
-      <div className="sm:px-4 md:px- 8 lg:px-32 pb-20">
+      <div className="sm:px-4 md:px-8 lg:px-32 pb-20">
         <Search characters={sortByLastname(characters)} />
         <Directory characters={sortByLastname(characters)} />
       </div>
     );
   }
-  return <div className="sm:px-4 md:px- 8 lg:px-32">loading</div>;
+  return <div className="sm:px-4 md:px- 8 lg:px-32"></div>;
 }
 export default Home;

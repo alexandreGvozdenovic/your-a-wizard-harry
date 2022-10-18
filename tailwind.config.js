@@ -28,6 +28,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         stars: "url('/images/starsNight.png')",
+        map: "url('/images/map.png')",
       },
       colors: {
         silver: "#84828F",

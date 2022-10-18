@@ -1,8 +1,14 @@
+import Link from "next/link";
+
 function Header() {
   return (
-    <div className="flex flex-col items-center z-10">
-      <img src="/images/logo.png" />
-    </div>
+    <Link href={"/"}>
+      <a>
+        <div className="flex flex-col items-center z-10">
+          <img src="/images/logo.png" />
+        </div>
+      </a>
+    </Link>
   );
 }
 
