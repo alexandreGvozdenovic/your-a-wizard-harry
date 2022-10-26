@@ -1,11 +1,6 @@
 import { boldHighlight } from "../utils";
 import { useRouter } from "next/router";
-function Input({
-  handleChange = () => {},
-  value,
-  suggestions = [],
-  handleReset = () => {},
-}) {
+function Input({ onChange, value, suggestions = [], handleReset = () => {} }) {
   const history = useRouter();
   return (
     <div>
@@ -22,7 +17,7 @@ function Input({
           value={value}
           className="block p-4  w-full  text-sm text-black bg-white rounded-full h-15"
           placeholder="Search for a character"
-          onChange={handleChange}
+          onChange={onChange}
         />
         <button type="submit" className="absolute right-1.5 top-1.5">
           <div className="flex justify-center items-center bg-purple w-12 h-12 rounded-3xl">
@@ -71,13 +66,13 @@ function Input({
                 </div>
               </>
             ) : (
-              <>
-                <p>No results found</p>
-                <p>
+              <div>
+                <h3 className="text-center mb-4 text-2xl">No results found</h3>
+                <p className="text-center font-body">
                   Looks like there is no results for you, try next time with
                   some Felix Felicis
                 </p>
-              </>
+              </div>
             )}
           </div>
         )}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { searchSuggestions } from "../utils";
 import Input from "./Input";
 
@@ -6,7 +6,7 @@ function Search({ characters }) {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(e.target.value);
   }
 
@@ -32,7 +32,7 @@ function Search({ characters }) {
         <form className="px-10">
           <Input
             value={inputValue}
-            handleChange={handleChange}
+            onChange={handleChange}
             suggestions={suggestions}
             handleReset={() => setInputValue("")}
           />

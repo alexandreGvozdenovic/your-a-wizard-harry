@@ -12,7 +12,7 @@ function Character({}) {
       (char) => char.name === history.query.character
     );
     return (
-      <div className="mt-20 px-4 xl:px-32">
+      <div className="mt-20 px-4 xl:px-32 pb-20">
         <div
           className="flex mb-6 cursor-pointer"
           onClick={() => history.back()}
