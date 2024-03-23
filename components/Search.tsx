@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchSuggestions } from "../utils";
+import { searchSuggestions } from "../common/utils";
 import Input from "./Input";
 
 function Search({ characters }) {

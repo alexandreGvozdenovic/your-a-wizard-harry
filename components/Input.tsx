@@ -1,4 +1,4 @@
-import { boldHighlight } from "../utils";
+import { boldHighlight } from "../common/utils";
 import { useRouter } from "next/router";
 function Input({ onChange, value, suggestions = [], handleReset = () => {} }) {
   const history = useRouter();

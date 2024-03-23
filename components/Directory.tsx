@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
-import { getAlphabet, filterByLastname, scrollToElement } from "../utils";
+import {
+  getAlphabet,
+  filterByLastname,
+  scrollToElement,
+} from "../common/utils";
 import LetterCard from "./LetterCard";
 function Directory({ characters }) {
   const [currentLetter, setCurrentLetter] = useState("A");

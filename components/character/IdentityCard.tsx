@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from "../../utils";
+import { capitalizeFirstLetter } from "../../common/utils";
 
 function IdentityCard({ character }) {
   const {

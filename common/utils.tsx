@@ -1,4 +1,6 @@
-export function sortByLastname(arr: any[]) {
+import { ICharacter } from "./types";
+
+export function sortByLastname(arr: ICharacter[]) {
   return arr.sort((a, b) => {
     const doesAHaveLastname: boolean = !!a.name.split(" ")[1];
     const doesBHaveLastname: boolean = !!b.name.split(" ")[1];
@@ -17,7 +19,7 @@ export function sortByLastname(arr: any[]) {
   });
 }
 
-export function filterByLastname(arr: any[], letter: string) {
+export function filterByLastname(arr: ICharacter[], letter: string) {
   return arr.filter((character) => {
     const doesCharHaveLastname: boolean = !!character.name.split(" ")[1];
     const splitted = character.name.split(" ");
@@ -29,7 +31,7 @@ export function filterByLastname(arr: any[], letter: string) {
   });
 }
 
-export function searchSuggestions(search: string, characters: any[]) {
+export function searchSuggestions(search: string, characters: ICharacter[]) {
   const regex = new RegExp(`${search}`, "gi");
   return characters.filter((e) => e.name.match(regex));
 }
